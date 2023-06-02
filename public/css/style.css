@@ -1,0 +1,1051 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../fonts/alfont_com_AlFont_com_AvenirArabic-Medium.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Avenir" !important;
+    background-color: #f1f1f1a1;
+    width: 100%;
+}
+
+.multi_step_form {
+    text-align: end;
+    background: #f1f1f1a1;
+    width: 100%;
+}
+
+.selectt select {
+    width: 50px;
+}
+
+.price-input {
+    display: none;
+    height: 33px;
+    width: 80px;
+    margin-bottom: 10px !important;
+    position: relative;
+    left: 0;
+    background: #f4f4f4;
+    border: 0.5px solid #eaeaea;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 20px;
+    -webkit-padding-end: 20px;
+    padding-inline-end: 20px;
+    color: #120007;
+    transition: all 0.3s ease-in-out;
+}
+
+#progressbar {
+    text-align: center;
+}
+
+.multi_step_form #msform {
+    box-shadow: 0px 10px 10px 6px #aaaaaa;
+    position: relative;
+    padding-top: 50px;
+    min-height: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    background: #ffffff;
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.multi_step_form #msform fieldset {
+    border: 0;
+    padding: 20px 105px 0;
+    position: relative;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.multi_step_form #msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+.multi_step_form #msform fieldset .form-group {
+    padding: 0 10px;
+}
+
+.multi_step_form #msform fieldset .form-control,
+.multi_step_form #msform fieldset .product_select {
+    border-radius: 4px;
+    border: 1px solid #d8e1e7;
+    padding: 0 20px;
+    height: 45px;
+    font: 400 15px/48px "Avenir";
+    color: #5f6771;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control {
+    text-align: end;
+    height: 20px;
+    width: 100%;
+    background: #f4f4f4;
+    border: 0.5px solid #eaeaea;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 40px;
+    -webkit-padding-end: 20px;
+    padding-inline-end: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #120007;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-circle {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    width: 70px;
+    height: 50px;
+    z-index: 5;
+}
+
+.multi_step_form #msform fieldset .form-control:hover,
+.multi_step_form #msform fieldset .form-control:focus,
+.multi_step_form #msform fieldset .product_select:hover,
+.multi_step_form #msform fieldset .product_select:focus {
+    border-color: #1F7547;
+}
+.table_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.multi_step_form #msform fieldset .product_select {
+    text-align: right !important;
+    padding-right: 35px;
+    width: 100%;
+}
+
+.multi_step_form #msform fieldset .product_select:after {
+    display: none;
+}
+
+.multi_step_form #msform fieldset .product_select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font: normal normal normal 24px/48px Ionicons;
+    color: #5f6771;
+}
+
+.multi_step_form #msform fieldset .input-group {
+    padding-bottom: 40px;
+}
+
+.multi_step_form #msform fieldset .input-group .custom-file {
+    width: 100%;
+    height: auto;
+}
+
+.multi_step_form #msform fieldset
+.input-group .custom-file .custom-file-label {
+    width: 168px;
+    border-radius: 5px;
+    cursor: pointer;
+    font: 700 14px/40px "Avenir";
+    border: 1px solid #99a2a8;
+    text-align: center;
+    transition: all 300ms linear 0s;
+    color: #5f6771;
+}
+
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label i {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:hover,
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:focus {
+    background: #1F7547;
+    border-color: #1F7547;
+    color: #fff;
+}
+
+.multi_step_form #msform fieldset .input-group .custom-file input {
+    display: none;
+}
+
+.multi_step_form #msform #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.multi_step_form #msform #progressbar li {
+    list-style-type: none;
+    color: #99a2a8;
+    font-size: 9px;
+    width: calc(100%/3);
+    float: right;
+    position: relative;
+    font: 500 13px/1 "Avenir";
+}
+
+.multi_step_form #msform #progressbar li:nth-child(2):before {
+    content: "2";
+}
+
+.multi_step_form #msform #progressbar li:nth-child(3):before {
+    content: "3";
+}
+
+.multi_step_form #msform #progressbar li:before {
+    content: "1";
+    font: normal normal normal 30px/50px Ionicons;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    background: #eaf0f4;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.multi_step_form #msform #progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: #eaf0f4;
+    position: absolute;
+    left: -50%;
+    top: 21px;
+    z-index: -1;
+}
+
+.multi_step_form #msform #progressbar li:last-child:after {
+    width: 150%;
+}
+
+.multi_step_form #msform #progressbar li.active {
+    color: #1F7547;
+}
+
+.multi_step_form #msform #progressbar li.active:before,
+.multi_step_form #msform #progressbar li.active:after {
+    background: #1F7547;
+    color: white;
+}
+
+.multi_step_form #msform .action-button {
+    cursor: pointer;
+    min-width: 130px;
+    background: #1F7547;
+    color: rgb(255, 255, 255);
+    font: 700 14px/40px "Avenir";
+    border-radius: 5px;
+    background: linear-gradient(to right, #405867, #405867) no-repeat;
+    background-size: 0%;
+    background-color: #1F7547;
+    border: 0 none;
+    transition: all 0.5s ease;
+}
+
+.multi_step_form #msform .action-button:hover,
+.multi_step_form #msform .action-button:focus {
+    background-size: 100%;
+}
+
+.option-circle {
+    width: 138px;
+    height: 40px;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(252, 252, 252);
+    border: 1px solid rgb(205, 205, 205);
+}
+
+.option-circle i {
+    border: 2px solid #1F7547;
+    position: relative;
+    top: -18px !important;
+    left: 4px !important;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #1F7547;
+}
+
+.option-circle span {
+    position: relative;
+    top: 5px;
+    left: 7px;
+    text-align: center;
+    font-family: "Avenir";
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.option-circle:hover {
+    box-shadow: 3px 3px 14px #dcdcdc;
+}
+
+.option-small {
+    height: 40px;
+    width: 95px;
+}
+
+#options-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+}
+
+.option-circle.selected span {
+    font-family: "Avenir";
+    font-weight: 100;
+    border: none;
+}
+
+.option-circle.selected .i-circle i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+    color: white;
+    background-color: #1F7547;
+
+}
+
+.option-circle .i-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.option-middle {
+    width: 110px;
+    height: 40px;
+}
+
+.list {
+    width: 100%;
+}
+
+.xd-message {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    min-height: 60px;
+    background: #FFF;
+    border: 1px solid #455870;
+    margin-bottom: 2rem;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.xd-message-icon {
+    background: #455870;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 1.6rem;
+    margin: 0;
+    margin-left: -1px;
+}
+
+.xd-message-content {
+    flex: 6;
+    padding-left: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.xd-message-content p {
+    padding: 0;
+    margin: 0;
+}
+
+.xd-message-close {
+    color: #455870;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: color 0.4s ease;
+}
+
+.xd-message-close .close-icon {
+    transition: color 0.4s ease;
+}
+
+.xd-message-close .close-icon:hover {
+    color: #0b0e11;
+}
+
+.msg-danger {
+    border: 1px solid #b05150;
+}
+
+.msg-danger .xd-message-icon {
+    background: #b05150;
+}
+
+.msg-danger .xd-message-content,
+.msg-danger .xd-message-close {
+    color: #b05150;
+}
+
+.msg-danger .xd-message-close .close-icon:hover {
+    color: #8d4140;
+}
+
+.msg-success {
+    border: 1px solid #47ae74;
+}
+
+.msg-success .xd-message-icon {
+    background: #47ae74;
+}
+
+.msg-success .xd-message-content,
+.msg-success .xd-message-close {
+    color: #47ae74;
+}
+
+.msg-success .xd-message-close .close-icon:hover {
+    color: #388a5c;
+}
+
+.hide {
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-animation: hideMsgAlert 1s;
+    animation: hideMsgAlert 1s;
+}
+
+@-webkit-keyframes hideMsgAlert {
+    0% {
+        opacity: 1;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes hideMsgAlert {
+    0% {
+        opacity: 1;
+        transform: translateX(-20%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 60%;
+    }
+
+    .xd-message-icon,
+    .xd-message-close {
+        font-size: 1rem;
+    }
+
+    .xd-message-content {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+
+    .multi_step_form #msform {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        border-radius: 6px;
+        max-width: 100% !important;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .selectt select {
+        width: 50px;
+    }
+
+    .form-group label,
+    .form-group a {
+        position: relative;
+        left: 60%;
+        font-size: 14px;
+        margin-top: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .response-mobile{
+        position: absolute;
+        left: 67px !important;
+    }
+
+    .response-mobile-2 {
+        position: absolute;
+        left: -17px !important;
+    }
+
+    .response-mobile-3 {
+        position: absolute;
+        left: -23px !important;
+    }
+
+    .response-mobile-4{
+        position: absolute;
+        left: 50px !important;
+    }
+
+    .response-mobile-5{
+        position: absolute;
+        left: 80px !important;
+    }
+
+    .response-mobile-6{
+        position: absolute;
+        left: 40px !important;
+    }
+
+
+    .btn-step-one {
+        position: relative;
+        top: 10px;
+        left: 70px;
+    }
+
+    .multi_step_form #msform fieldset .form-control,
+    .multi_step_form #msform fieldset .product_select {
+        width: 200% !important;
+        position: relative;
+        right: 40%;
+    }
+
+    .multi_step_form #msform #progressbar li:after {
+        content: "";
+        width: 100%;
+        height: 7px;
+        background: #eaf0f4;
+        position: absolute;
+        left: -50%;
+        top: 21px;
+        z-index: -1;
+    }
+
+    .multi_step_form #msform #progressbar li:before {
+        content: "1";
+        font: normal normal normal 20px/20px Ionicons;
+        width: 40px;
+        height: 40px;
+        line-height: 42px;
+        display: block;
+        background: #eaf0f4;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+    }
+
+    .img-circle {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        width: 45px;
+        height: 35px;
+        z-index: 5;
+    }
+
+    .span-text {
+        width: 100%;
+    }
+
+    .option-circle i {
+        border: 2px solid #1F7547;
+        position: relative;
+        top: -22px !important;
+        left: -10px !important;
+        height: 16px;
+        border-radius: 50%;
+        color: #1F7547;
+    }
+
+    #options-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100% !important;
+        height: 60px;
+    }
+
+    .option-small i {
+        border: 2px solid #1F7547;
+        position: relative;
+        top: -15px !important;
+        left: -10px !important;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: #1F7547;
+    }
+
+    .option-circle {
+        height: 40px;
+        min-width: 125px !important;
+        border-radius: 25px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: rgb(252, 252, 252);
+        border: 1px solid rgb(205, 205, 205);
+    }
+
+    .option-circle:hover {
+        box-shadow: 3px 3px 14px #cacaca;
+    }
+
+    .option-circle span {
+        position: relative;
+        top: 5px;
+        left: 7px;
+        text-align: center;
+        font-family: "Avenir";
+        font-weight: 100;
+        font-size: 10px;
+    }
+
+
+
+    .option-circle.selected span {
+        font-family: "Avenir";
+        font-weight: 100;
+        border: none;
+    }
+
+    .option-circle.selected .i-circle i {
+        position: relative;
+        top: -14px;
+        left: 2px !important;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: white;
+        background-color: #1F7547;
+    }
+
+    .option-middle {
+        max-width: 100% !important;
+        height: 40px;
+    }
+
+    .option-middle i {
+        border: 2px solid #1F7547;
+        position: relative;
+        top: -15px !important;
+        left: -10px !important;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: #1F7547;
+    }
+
+    .option-large {
+        width: 150px !important;
+    }
+
+    .option-custome-large {
+        width: 120px !important;
+    }
+
+    .option-large span {
+        font-size: 10px;
+    }
+
+    .option-large i,
+    .option-custome-large i {
+        border: 2px solid #1F7547;
+        position: relative;
+        top: -15px !important;
+        left: -10px !important;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: #1F7547;
+    }
+
+    .option-circle .i-circle {
+        width: 41px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    .price-input {
+        display: none;
+        height: 33px;
+        margin-bottom: 10px !important;
+        position: relative;
+        left: 0;
+        text-align: end;
+        height: 20px;
+        width: 100%;
+        background: #f4f4f4;
+        border: 0.5px solid #eaeaea;
+        outline: none !important;
+        box-shadow: none !important;
+        padding: 0 40px;
+        -webkit-padding-end: 20px;
+        padding-inline-end: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #120007;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .multi_step_form #msform fieldset .input-group .custom-file {
+        position: relative;
+        left: 21%;
+    }
+
+    .step-three .label{
+        position: relative;
+        font-size: 14px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+
+    .custmo-input {
+        width: 185%;
+        position: relative;
+        left: 30%;
+    }
+
+    .custmo-input-bank {
+        width: 85%;
+        position: relative;
+        left: -50%;
+    }
+
+    .xd-message-icon,
+    .xd-message-close {
+        font-size: 1rem;
+    }
+
+    .xd-message-content {
+        font-size: 0.8rem;
+    }
+
+    .heading span {
+        display: none;
+    }
+
+}
+
+small {
+    color: #808080;
+}
+
+.modal-confirm {
+    color: #434e65;
+    width: 525px;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.modal-confirm .modal-header {
+    background: #47c9a2;
+    border-bottom: none;
+    position: relative;
+    text-align: center;
+    margin: -20px -20px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 35px;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.modal-confirm .form-control,
+.modal-confirm .btn {
+    min-height: 40px;
+    border-radius: 3px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    text-shadow: none;
+    opacity: 0.5;
+}
+
+.modal-confirm .close:hover {
+    opacity: 0.8;
+}
+
+.modal-confirm .icon-box {
+    color: #fff;
+    width: 95px;
+    height: 95px;
+    display: inline-block;
+    border-radius: 50%;
+    z-index: 9;
+    border: 5px solid #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.modal-confirm .icon-box i {
+    font-size: 64px;
+    margin: -4px 0 0 -4px;
+}
+
+.modal-confirm.modal-dialog {
+    margin-top: 80px;
+}
+
+.modal-confirm .btn,
+.modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #eeb711 !important;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 6px 20px;
+    border: none;
+}
+
+.modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+    background: #eda645 !important;
+    outline: none;
+}
+
+.modal-confirm .btn span {
+    margin: 1px 3px 0;
+    float: left;
+}
+
+.modal-confirm .btn i {
+    margin-left: 1px;
+    font-size: 20px;
+    float: right;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
+
+/* Tables */
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 801px) {
+    .table-responsive {
+        width: 100%;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    -webkit-box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .28);
+    -moz-box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .28);
+    box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .28);
+    margin-bottom: 40px;
+    margin-top: .5em;
+    width: 100%;
+    max-width: 100%;
+}
+
+table thead tr {
+    border-bottom: 3px solid #1F7547;
+    color: #000;
+}
+
+table tfoot tr {
+    border-top: 3px solid #1F7547;
+}
+
+table thead th,
+table tfoot th {
+    background-color: #fff;
+    color: #000;
+    font-size: .83333em;
+    line-height: 1.8;
+    padding: 15px 14px 13px 14px;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+table tbody tr {
+    background-color: #fff;
+}
+
+table tbody tr:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+table th,
+table td {
+    border: 1px solid #bfbfbf;
+    padding: 10px 14px;
+    position: relative;
+    vertical-align: middle;
+}
+
+caption {
+    font-size: 1.111em;
+    font-weight: 300;
+    padding: 10px 0;
+}
+
+@media (max-width:1024px) {
+    table {
+        font-size: .944444em;
+    }
+}
+
+@media (max-width:767px) {
+    table {
+        font-size: 1em;
+    }
+}
+
+/* Responsive table full */
+/* Responsive table full */
+@media (max-width: 767px) {
+    .table-responsive-full {
+        box-shadow: none;
+    }
+
+    .table-responsive-full thead tr,
+    .table-responsive-full tfoot tr {
+        display: none;
+    }
+
+    .table-responsive-full tbody tr {
+        -webkit-box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .28);
+        -moz-box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .28);
+        box-shadow: 0px 7px 6px -6px rgba(0, 0, 0, .28);
+        margin-bottom: 20px;
+    }
+
+    .table-responsive-full tbody tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .table-responsive-full tr,
+    .table-responsive-full td {
+        display: block;
+    }
+
+    .table-responsive-full td {
+        background-color: #fff;
+        border-top: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table-responsive-full td {
+        color: #7c7c7c;
+    }
+
+    .table-responsive-full td:hover {
+        background-color: #eee;
+        color: #000;
+    }
+
+    .table-responsive-full td:hover:before {
+        color: hsl(0, 0%, 40%);
+    }
+
+    .table-responsive-full td:first-child {
+        border-top: 1px solid #bfbfbf;
+        border-bottom: 3px solid #1F7547;
+        border-radius: 4px 4px 0 0;
+        color: #000;
+        font-size: 1.11111em;
+        font-weight: bold;
+    }
+
+    .table-responsive-full td:before {
+        content: attr(data-label);
+        font-family: 'Avenir';
+        display: flex;
+        color: hsl(0, 0%, 60%);
+        font-size: 14px;
+        font-weight: normal;
+        margin-left: -100%;
+        text-transform: uppercase;
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 360px) {
+    .table-responsive-full td {
+        padding-left: 14px;
+    }
+
+    .table-responsive-full td:before {
+        display: block;
+        margin-bottom: .5em;
+        margin-left: 0;
+    }
+}
